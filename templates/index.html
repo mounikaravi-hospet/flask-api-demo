@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <link href="/static/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <h1> Newyork Times about {{ topic }} </h1>
+    <div class="container">
+        {% for i in range(10) %}
+        <div class="articles">
+            <h3> {{ headlines[i] }} </h3>
+            <p> {{ snippet[i] }} </p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+
+</html>
