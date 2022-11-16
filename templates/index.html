@@ -9,8 +9,12 @@
     <div class="container">
         {% for i in range(10) %}
         <div class="articles">
-            <h3> {{ headlines[i] }} </h3>
-            <p> {{ snippet[i] }} </p>
+            <li>
+                <ul>
+                    <h3> {{ headlines[i] }} </h3>
+                    <p> {{ snippet[i] }} </p>
+                </ul>
+            </li>
         </div>
         {% endfor %}
     </div>

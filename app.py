@@ -7,7 +7,7 @@ app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
 
 @app.route("/")
 def main():
-    query_word = "Road"
+    query_word = "Georgia"
     article_data = get_article_data(query_word)
 
     # print(list(article_data))

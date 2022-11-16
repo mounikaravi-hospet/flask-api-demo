@@ -1,4 +1,7 @@
 body {
-    background-color: black;
+    background-color: rgb(78, 78, 221);
     color: white
+}
+.container{
+    margin-bottom: auto;
 }
