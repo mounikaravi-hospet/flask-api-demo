@@ -5,19 +5,29 @@
 </head>
 
 <body>
-    <h1> Newyork Times about {{ topic }} </h1>
-    <div class="container">
-        {% for i in range(10) %}
-        <div class="articles">
-            <li>
-                <ul>
-                    <h3> {{ headlines[i] }} </h3>
-                    <p> {{ snippet[i] }} </p>
-                </ul>
-            </li>
-        </div>
-        {% endfor %}
+
+    <div class="form-container">
+        <form action="/" method="post">
+            <input type="text" name="query">
+            <button type="submit">Search</button>
+        </form>
     </div>
+
+    {% if topic %}
+        <h1> Newyork Times about {{ topic | capitalize }} </h1>
+        <div class="container">
+            {% for i in range(num_articles) %}
+            <div class="articles">            
+                <h4> {{ headlines[i] }} </h4>
+                <p> {{ snippet[i] }} </p>
+            </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+  
+
+ 
 </body>
 
 </html>

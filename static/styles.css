@@ -1,7 +1,15 @@
-body {
-    background-color: rgb(78, 78, 221);
-    color: white
-}
+
 .container{
-    margin-bottom: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 10px solid rgba(31, 31, 223, 0.849);
+    border-radius: 10px;
+    background: lightskyblue;
+}
+.articles{
+    /* background-color: rgba(255, 255, 255, 0.189); */
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
 }

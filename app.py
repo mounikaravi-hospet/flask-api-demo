@@ -5,18 +5,22 @@ from nytapi import get_article_data
 app = flask.Flask(__name__)
 app.config["SEND_FILE_MAX_AGE_DEFAULT"] = 0
 
-@app.route("/")
+@app.route("/", methods = ["GET", "POST"])
 def main():
-    query_word = "Georgia"
-    article_data = get_article_data(query_word)
+    query = flask.request.form.get("query")
+    # query_word = "Trees"
+    headlines, snippet, length = get_article_data(query)
+
+    
 
     # print(list(article_data))
 
     return flask.render_template(
         "index.html",
-        topic = query_word,
-        headlines = article_data["headlines"],
-        snippet = article_data["snippet"]
+        num_articles = length,
+        topic = query,
+        headlines = headlines,
+        snippet = snippet
     )
 
 app.run(
